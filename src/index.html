@@ -12,14 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <!-- Підключаємо стилі SimpleLightbox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.1.3/dist/simple-lightbox.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.3/simple-lightbox.min.css" rel="stylesheet">
 
-    <!-- Підключаємо стилі iziToast -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
-
-    <!-- Підключення BasicLightbox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.0/dist/basicLightbox.min.css">
-
+    <!-- Підключення стилів iziToast -->
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
 
 
     <!-- Мої стилі -->
@@ -40,7 +37,7 @@
         </form>
 
         <!-- Індикатор завантаження -->
-        <div class="loader" style="display:none;">Loading...</div> 
+        <div class="loader" style="display:none;"></div> 
 
         <!-- Галерея з зображеннями -->
         <div class="gallery"></div> 
@@ -49,8 +46,9 @@
 
     <load src="./partials/footer.html" />
 
-    <script type="module" src="./main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.0/dist/basicLightbox.min.js"></script>
+    <script type="module" src="./main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.3/simple-lightbox.min.js" defer></script>
+
   </body>
 </html>

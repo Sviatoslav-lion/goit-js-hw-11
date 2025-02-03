@@ -10,7 +10,9 @@ const gallery = document.querySelector('.gallery'); // Галерея
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
+  console.log('Search button clicked');
   const query = input.value.trim();
+
 
   if (query === '') return;
 
@@ -31,6 +33,12 @@ form.addEventListener('submit', async (event) => {
     }
   } catch (error) {
     hideLoadingIndicator(); // Приховуємо індикатор у разі помилки
-    alert('An error occurred while fetching the images.');
+
+    //alert('An error occurred while fetching the images.');
+    iziToast.error({
+      title: 'Sorry',
+      message: 'An error occurred while fetching the images.',
+    });
+
   }
 });

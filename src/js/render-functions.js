@@ -25,29 +25,15 @@ export const renderImages = (images) => {
   </a>
     `;
   }).join('');
+
   gallery.innerHTML = markup;
-  
+
   // Після того, як зображення додано, потрібно оновити SimpleLightbox
   const lightbox = new SimpleLightbox('.gallery a');
-  lightbox.refresh();  // Оновлюємо бібліотеку після того, як зображення додано до галереї
+  //lightbox.refresh();  // Оновлюємо бібліотеку після того, як зображення додано до галереї
 
   // Додаємо функціонал для відкриття зображення в модальному вікні за допомогою BasicLightbox
   const galleryItems = document.querySelectorAll('.gallery-item img');
-  
-  galleryItems.forEach(item => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-      const imageURL = item.parentElement.href; // Отримуємо URL великого зображення
-
-      // Відкриваємо зображення в модальному вікні
-      const instance = basicLightbox.create(`
-        <img src="${imageURL}" alt="${item.alt}">
-      `);
-
-      instance.show();
-    });
-  });
-
 };
 
 // Функція для показу повідомлення, якщо нічого не знайдено
